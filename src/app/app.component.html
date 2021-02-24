@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TraffickCam</title>
+    <link rel="stylesheet" href="/src/app/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/app/assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="/src/app/assets/css/Slider-Range.css">
+    <link rel="stylesheet" href="/src/app/assets/css/styles.css">
+</head>
+
+<body>
+    <div class="d-flex flex-column" id="wrapper">
+        <nav class="navbar navbar-light navbar-expand-md" style="background: var(--dark);color: var(--white);">
+            <div class="container-fluid"><a class="navbar-brand" href="#" style="color: var(--white);">TraffickCam</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: var(--white);">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" id="contact-us" style="color: var(--white);"><a class="nav-link active" href="#" style="color: var(--white);">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid d-flex flex-column justify-content-md-start" id="content" style="margin-top: 10px;">
+            <div class="row">
+                <div class="col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8 d-flex flex-column" id="content-left">
+                    <div class="card shadow mb-4" id="map">
+                        <div class="card-body"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="400"></iframe></div>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column justify-content-center" id="content-right">
+                    <div class="card shadow mb-4" id="filters">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 style="margin: 0;">Filters</h6>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <div class="d-flex flex-column">
+                                <div class="row">
+                                    <div class="col-4 d-flex flex-column" id="filters-left"><span style="font-size: 13.5px;">Year</span><input class="custom-range" type="range" id="year-range" name="Year" min="2000" max="2020" value="2010" style="padding-top: 15px;padding-right: 10px;"></div>
+                                    <div class="col-4 d-flex justify-content-center" id="filters-middle" style="padding-right: 5px;padding-left: 5px;">
+                                        <div><small style="font-size: 13.5px;">Hotel Chain</small><select class="custom-select custom-select-sm" id="hotel-chain" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                                <option value="12">Best Western</option>
+                                                <option value="13">Comfort Inn</option>
+                                                <option value="14">Holiday Inn</option>
+                                            </select><small style="font-size: 13.5px;">Room Type</small><select class="custom-select custom-select-sm" id="room-type" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                                <option value="12">One Bedroom</option>
+                                                <option value="13">Two Bedroom</option>
+                                                <option value="14">Suite</option>
+                                            </select></div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column justify-content-center" id="filters-right" style="padding-right: 5px;padding-left: 5px;">
+                                        <div><small style="font-size: 13.5px;">Object</small><select class="custom-select custom-select-sm" id="object" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                                <option value="14">Desk</option>
+                                                <option value="12">Microwave</option>
+                                                <option value="13">Minifridge</option>
+                                            </select><small>...</small><select class="custom-select custom-select-sm" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                                <option value="12">Best Western</option>
+                                                <option value="13">Comfort Inn</option>
+                                                <option value="14">Holiday Inn</option>
+                                            </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4" id="gallery">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 style="margin: 0;">Gallery</h6>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <div class="carousel slide" data-ride="carousel" data-interval="false" id="carousel-1">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div><span class="text-center d-block" style="font-size: 12px;">Figure 1</span>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;],&quot;fill&quot;:true}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div><span class="text-center d-block" style="font-size: 12px;">Figure 2</span>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;scatter&quot;,&quot;data&quot;:{&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;4500&quot;},{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;5300&quot;},{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;6250&quot;},{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;7800&quot;},{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;9800&quot;},{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;15000&quot;}]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div><span class="text-center d-block" style="font-size: 12px;">Figure 3</span>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-1" data-slide-to="2"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4" id="builder">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 style="margin: 0;">Builder</h6>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <div class="row" style="margin-bottom: 30px;">
+                                    <div class="col-4 d-flex flex-column justify-content-center" id="builder-left" style="padding-right: 5px;padding-left: 5px;">
+                                        <div><small style="font-size: 13.5px;">X-Feature</small><select class="custom-select custom-select-sm" id="x-feature" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                            </select></div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column justify-content-center" id="builder-middle" style="padding-right: 5px;padding-left: 5px;">
+                                        <div><small style="font-size: 13.5px;">Y-Feature</small><select class="custom-select custom-select-sm" id="y-feature" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                            </select></div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column justify-content-center" id="builder-right" style="padding-right: 5px;padding-left: 5px;">
+                                        <div><small style="font-size: 13.5px;">Type</small><select class="custom-select custom-select-sm" id="graph-type" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value=""></option>
+                                            </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="save-visualization">
+                                <form>
+                                    <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Visualization Name" style="height: 25px;">
+                                        <div class="input-group-append"><button class="btn btn-dark active py-0" type="submit"><span>Save</span></button></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-light navbar-expand-md" style="background: var(--dark);color: var(--white);height: 32px;">
+            <div class="container-fluid"><a class="navbar-brand" href="#" style="color: var(--white);font-size: 18px;">Saved Visualizations:</a></div>
+        </nav>
+        <div class="container-fluid d-flex flex-column justify-content-md-start" id="saved-visualizations" style="margin-top: 10px;">
+            <div class="row"></div>
+        </div>
+    </div>
+    
+    <script src="/src/app/assets/js/jquery.min.js"></script>
+    <script src="/src/app/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/src/app/assets/js/chart.min.js"></script>
+    <script src="/src/app/assets/js/bs-init.js"></script>
+</body>
+
+</html>
+
+<router-outlet></router-outlet>
