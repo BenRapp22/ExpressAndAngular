@@ -37,32 +37,42 @@
                         <div class="card-body d-flex flex-column justify-content-center">
                             <div class="d-flex flex-column">
                                 <div class="row">
-                                    <div class="col-4 d-flex flex-column" id="filters-left"><span style="font-size: 13.5px;">Year</span><input class="custom-range" type="range" id="year-range" name="Year" min="2000" max="2020" value="2010" style="padding-top: 15px;padding-right: 10px;"></div>
+                                    <div class="col-4 d-flex flex-column" id="filters-left"><span style="font-size: 13.5px;">Year</span>
+                                        <input class="custom-range" type="range" id="yearRange" name="yearRange" min="2000" max="2020" value="2010" style="padding-top: 15px;padding-right: 10px;padding-bottom: 15px;" (change) = getYear($event) oninput="yearDisplayed.value = yearRange.value">
+                                        <output id='yearDisplayed' name = 'yearDisplayed' for='yearRange' style="font-size: 13.5px;">2010</output>
+                                    </div>
                                     <div class="col-4 d-flex justify-content-center" id="filters-middle" style="padding-right: 5px;padding-left: 5px;">
-                                        <div><small style="font-size: 13.5px;">Hotel Chain</small><select class="custom-select custom-select-sm" id="hotel-chain" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                        <div>
+                                            <small style="font-size: 13.5px;">Hotel Chain</small>
+                                            <select class="custom-select custom-select-sm" id="hotel-chain" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain" (change) = getHotelChain($event)>
                                                 <option value=""></option>
-                                                <option value="12">Best Western</option>
-                                                <option value="13">Comfort Inn</option>
-                                                <option value="14">Holiday Inn</option>
-                                            </select><small style="font-size: 13.5px;">Room Type</small><select class="custom-select custom-select-sm" id="room-type" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                                <option value="Best Western">Best Western</option>
+                                                <option value="Comfort Inn">Comfort Inn</option>
+                                                <option value="Holiday Inn">Holiday Inn</option>
+                                            </select>
+                                            <small style="font-size: 13.5px;">Room Type</small>
+                                            <select class="custom-select custom-select-sm" id="room-type" style="font-size: 12px;margin-bottom: 10px;" name="Room Type" (change) = getRoomType($event)>
                                                 <option value=""></option>
-                                                <option value="12">One Bedroom</option>
-                                                <option value="13">Two Bedroom</option>
-                                                <option value="14">Suite</option>
-                                            </select></div>
+                                                <option value="One Bedroom">One Bedroom</option>
+                                                <option value="Two Bedroom">Two Bedroom</option>
+                                                <option value="Suite">Suite</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="col-4 d-flex flex-column justify-content-center" id="filters-right" style="padding-right: 5px;padding-left: 5px;">
-                                        <div><small style="font-size: 13.5px;">Object</small><select class="custom-select custom-select-sm" id="object" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                        <div><small style="font-size: 13.5px;">Object</small>
+                                            <select class="custom-select custom-select-sm" id="object" style="font-size: 12px;margin-bottom: 10px;" name="Object" (change) = getObject($event)>
                                                 <option value=""></option>
-                                                <option value="14">Desk</option>
-                                                <option value="12">Microwave</option>
-                                                <option value="13">Minifridge</option>
+                                                <option value="Desk">Desk</option>
+                                                <option value="Microwave">Microwave</option>
+                                                <option value="Minifridge">Minifridge</option>
                                             </select><small>...</small><select class="custom-select custom-select-sm" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
                                                 <option value=""></option>
                                                 <option value="12">Best Western</option>
                                                 <option value="13">Comfort Inn</option>
                                                 <option value="14">Holiday Inn</option>
-                                            </select></div>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -102,26 +112,35 @@
                             <div>
                                 <div class="row" style="margin-bottom: 30px;">
                                     <div class="col-4 d-flex flex-column justify-content-center" id="builder-left" style="padding-right: 5px;padding-left: 5px;">
-                                        <div><small style="font-size: 13.5px;">X-Feature</small><select class="custom-select custom-select-sm" id="x-feature" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                        <div><small style="font-size: 13.5px;">X-Feature</small>
+                                            <select class="custom-select custom-select-sm" id="x-feature" style="font-size: 12px;margin-bottom: 10px;" name="X Feature" (change) = getXFeature($event)>
                                                 <option value=""></option>
-                                            </select></div>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="col-4 d-flex flex-column justify-content-center" id="builder-middle" style="padding-right: 5px;padding-left: 5px;">
-                                        <div><small style="font-size: 13.5px;">Y-Feature</small><select class="custom-select custom-select-sm" id="y-feature" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                        <div><small style="font-size: 13.5px;">Y-Feature</small>
+                                            <select class="custom-select custom-select-sm" id="y-feature" style="font-size: 12px;margin-bottom: 10px;" name="Y Feature" (change) = getYFeature($event)>
                                                 <option value=""></option>
-                                            </select></div>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="col-4 d-flex flex-column justify-content-center" id="builder-right" style="padding-right: 5px;padding-left: 5px;">
-                                        <div><small style="font-size: 13.5px;">Type</small><select class="custom-select custom-select-sm" id="graph-type" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain">
+                                        <div><small style="font-size: 13.5px;">Type</small>
+                                            <select class="custom-select custom-select-sm" id="graph-type" style="font-size: 12px;margin-bottom: 10px;" name=" Graph Type" (change) = getType($event)>
                                                 <option value=""></option>
-                                            </select></div>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="save-visualization">
                                 <form>
-                                    <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Visualization Name" style="height: 25px;">
-                                        <div class="input-group-append"><button class="btn btn-dark active py-0" type="submit"><span>Save</span></button></div>
+                                    <div class="input-group">
+                                        <input #visName id="saveVisualization" class="bg-light form-control border-0 small" type="text"  placeholder="Visualization Name" style="height: 25px;">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark active py-0" type="reset" (click) = 'getVisualizationName(visName.value)'><span>Save</span></button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
