@@ -1,0 +1,42 @@
+<div class="card shadow mb-4" id="filters">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6 style="margin: 0;">Filters</h6>
+    </div>
+    <div class="card-body d-flex flex-column justify-content-center">
+        <div class="d-flex flex-column">
+            <div class="row">
+                <div class="col-4 d-flex flex-column" id="filters-left"><span style="font-size: 13.5px;">Year</span>
+                    <input class="custom-range" type="range" id="yearRange" name="yearRange" min="2000" max="2020" value="2010" style="padding-top: 15px;padding-right: 10px;padding-bottom: 15px;" (change) = getYear($event) oninput="yearDisplayed.value = yearRange.value">
+                    <output id='yearDisplayed' name = 'yearDisplayed' for='yearRange' style="font-size: 13.5px;">2010</output>
+                </div>
+                <div class="col-4 d-flex justify-content-center" id="filters-middle" style="padding-right: 5px;padding-left: 5px;">
+                    <div><small style="font-size: 13.5px;">Hotel Chain</small>
+                        <select class="custom-select custom-select-sm" id="hotel-chain" style="font-size: 12px;margin-bottom: 10px;" name="Hotel Chain" (change) = "getHotelChain($event)">
+                            <option value=""></option>
+                            <option value="Best Western">Best Western</option>
+                            <option value="Comfort Inn">Comfort Inn</option>
+                            <option value="Holiday Inn">Holiday Inn</option>
+                        </select><small style="font-size: 13.5px;">Room Type</small>
+                        <select class="custom-select custom-select-sm" id="room-type" style="font-size: 12px;margin-bottom: 10px;" name="Room Type" (change) = "getRoomType($event)">
+                            <option value=""></option>
+                            <option value="One Bedroom">One Bedroom</option>
+                            <option value="Two Bedroom">Two Bedroom</option>
+                            <option value="Suite">Suite</option>
+                        </select></div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center" id="filters-right" style="padding-right: 5px;padding-left: 5px;">
+                    <div><small style="font-size: 13.5px;">Object</small>
+                        <select class="custom-select custom-select-sm" id="object" style="font-size: 12px;margin-bottom: 10px;" name="Object" (change) = "getObject($event)">
+                            <option value=""></option>
+                            <option value="Desk">Desk</option>
+                            <option value="Microwave">Microwave</option>
+                            <option value="Minifridge">Minifridge</option>
+                        </select><small>...</small>
+                        <select class="custom-select custom-select-sm" style="font-size: 12px;margin-bottom: 10px;" name="">
+                            <option value=""></option>
+                        </select></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

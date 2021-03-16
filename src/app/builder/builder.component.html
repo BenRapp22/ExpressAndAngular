@@ -1,0 +1,41 @@
+<div class="card shadow mb-4" id="builder">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6 style="margin: 0;">Builder</h6>
+    </div>
+    <div class="card-body">
+        <div>
+            <div class="row" style="margin-bottom: 30px;">
+                <div class="col-4 d-flex flex-column justify-content-center" id="builder-left" style="padding-right: 5px;padding-left: 5px;">
+                    <div><small style="font-size: 13.5px;">X-Feature</small>
+                        <select class="custom-select custom-select-sm" id="x-feature" style="font-size: 12px;margin-bottom: 10px;" name="X Feature">
+                            <option value=""></option>
+                        </select></div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center" id="builder-middle" style="padding-right: 5px;padding-left: 5px;">
+                    <div><small style="font-size: 13.5px;">Y-Feature</small>
+                        <select class="custom-select custom-select-sm" id="y-feature" style="font-size: 12px;margin-bottom: 10px;" name="Y Feature">
+                            <option value=""></option>
+                        </select></div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center" id="builder-right" style="padding-right: 5px;padding-left: 5px;">
+                    <div><small style="font-size: 13.5px;">Type</small>
+                        <select class="custom-select custom-select-sm" id="graph-type" style="font-size: 12px;margin-bottom: 10px;" name="Type">
+                            <option value=""></option>
+                        </select></div>
+                </div>
+            </div>
+        </div>
+        <div id="save-visualization">
+            <form>
+                <div class="input-group">
+                    <input #visName class="bg-light form-control border-0 small" type="text" placeholder="Visualization Name" style="height: 25px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark active py-0" type="reset" (click) = 'getVisualizationName(visName.value)'>
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
