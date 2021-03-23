@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GraphDataService } from '../graph-data.service';
+
 
 @Component({
   selector: 'app-builder',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuilderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private graphService: GraphDataService) { }
+
 
   ngOnInit(): void {
   }
@@ -31,5 +34,6 @@ export class BuilderComponent implements OnInit {
     console.log("save as: " + name);
     return name;
   }
+  
 
 }

@@ -12,6 +12,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { BuilderComponent } from './builder/builder.component';
 import { SavedVisualizationsComponent } from './saved-visualizations/saved-visualizations.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GraphDataService } from './graph-data.service';
+import { ImagesService } from './images.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GraphDataService, ImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

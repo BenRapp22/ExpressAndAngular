@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImagesService } from '../images.service';
 
 @Component({
   selector: 'app-map',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private imagesService: ImagesService) { }
 
   ngOnInit(): void {
   }
 
-}
